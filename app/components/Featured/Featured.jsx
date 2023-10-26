@@ -1,8 +1,6 @@
-import React from "react";
-
 function Featured() {
   return (
-    <section className="w-full h-[30vh] my-10 grid grid-cols-3 px-10 py-4 gap-10">
+    <section className="w-full my-10 grid grid-cols-3 px-10 py-4 gap-10">
       <div className="col-span-1 h-full">
         <h3 className="text-3xl font-semibold">EQ beates IQ</h3>
       </div>

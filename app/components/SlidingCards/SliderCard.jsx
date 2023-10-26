@@ -1,13 +1,20 @@
-import { twMerge } from "tailwind-merge";
 import Image from "next/image";
 import React from "react";
 
-function SliderCard({ title, body, image, classNames }) {
+function SliderCard({ data }) {
   return (
-    <div className={twMerge(classNames, "px-4 py-2 flex flex-col rounded-md")}>
-      <Image src={image} alt={title} className="h-10 aspect-square" />
-      <h3 className="text-md font-bold mt-4">{title}</h3>
-      <p className="text-sm">{body}</p>
+    <div
+      className={`h-44 p-6 flex flex-col rounded-2xl ${data.class} ${
+        data.id === 2 ? "transform -rotate-12" : ""
+      }`}
+    >
+      <Image
+        src={data.image}
+        alt={data.title}
+        className="h-[28px] w-[28px] mb-2"
+      />
+      <h3 className="text-sm font-semibold my-2">{data.title}</h3>
+      <p className="text-xs">{data.body}</p>
     </div>
   );
 }
