@@ -7,14 +7,12 @@ import SlidingCards from "./components/SlidingCards/SlidingCards";
 import TeamNote from "./components/TeamNode/TeamNote";
 import Vacancies from "./components/Vacancies/Vacancies";
 import Work from "./components/Work/Work";
-import Test from "./components/Test";
 import List from "./components/list/List";
 import Footer from "./components/Footer/Footer";
 export default function Home() {
   return (
     <main className="w-full h-full bg-white">
       <div className="container mx-auto h-full px-8">
-        {/* <Test /> */}
         <Hero />
         <Featured />
         <SlidingCards />

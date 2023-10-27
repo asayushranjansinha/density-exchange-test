@@ -1,17 +1,19 @@
 "use client";
 
+import { situations } from "@/constants";
+import classNames from "classnames";
 import { motion } from "framer-motion";
 
 function test() {
   return (
-    <div className="w-full h-screen flex gap-2 relative">
-      <motion.div
-        initial={{ x: "100%" }} // Set the initial position outside the screen on the right
-      animate={{ x: "0%" }} // Animate the position to 0
-      transition={{ duration: 1 }} // Set the animation duration
-        className="w-40 h-40 bg-blue-800 absolute top-1/2 right-1"
-      ></motion.div>
-    </div>
+    <div className="flex flex-wrap justify-center">
+    {situations.map((item) => (
+      <div key={item.id} className={classNames(item.class, "p-4 m-4")}>
+        <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+        <p className="text-sm">{item.body}</p>
+      </div>
+    ))}
+  </div>
   );
 }
 
