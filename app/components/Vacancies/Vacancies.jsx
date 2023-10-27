@@ -30,7 +30,7 @@ function Vacancies() {
       >
         Open Vacancies
       </motion.h1>
-      <div className="w-full h-fit grid grid-cols-3 gap-20 mt-10">
+      <div className="w-full h-fit flex gap-20 mt-10">
         {vacancies.map((item) => (
           <Card key={item.id} data={item} />
         ))}

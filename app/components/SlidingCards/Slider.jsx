@@ -12,7 +12,9 @@ import { situations } from "@/constants";
 function Slider() {
   return (
     <Swiper
-      slidesPerView={4}
+      slidesPerView={3}
+      centeredSlides={true}
+      centerInsufficientSlides={true}
       spaceBetween={30}
       freeMode={true}
       modules={[FreeMode]}
@@ -20,7 +22,7 @@ function Slider() {
     >
       {situations.map((item) => (
         <SwiperSlide key={item.id} className="z-50 py-10">
-          {<SliderCard data={item}  />}
+          {<SliderCard data={item} />}
         </SwiperSlide>
       ))}
     </Swiper>

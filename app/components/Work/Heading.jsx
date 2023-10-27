@@ -33,7 +33,7 @@ function Heading() {
   return (
     <motion.div
       ref={ref}
-      className="w-full h-[20%] flex justify-between px-10 py-4"
+      className="w-full flex justify-between px-10 py-4"
     >
       <motion.h1
         variants={Leftvariants}

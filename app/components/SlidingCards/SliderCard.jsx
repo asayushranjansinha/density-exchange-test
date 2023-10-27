@@ -4,8 +4,8 @@ import React from "react";
 function SliderCard({ data }) {
   return (
     <div
-      className={`h-44 p-6 flex flex-col rounded-2xl ${data.class} ${
-        data.id === 2 ? "transform -rotate-12" : ""
+      className={`${data.class} h-44 w-72 p-6 flex flex-col rounded-2xl ${
+        data.id === 3 ? "transform -rotate-12" : ""
       }`}
     >
       <Image

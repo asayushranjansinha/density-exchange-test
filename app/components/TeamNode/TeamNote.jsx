@@ -1,7 +1,8 @@
 "use client";
-import { motion, useInView } from "framer-motion";
+import { inView, motion, useInView } from "framer-motion";
 import React, { useRef } from "react";
 import { Great_Vibes } from "next/font/google";
+import Button from "../shared/Button/Button";
 
 const cursive = Great_Vibes({ weight: "400", subsets: ["latin"] });
 
@@ -12,26 +13,26 @@ const textAnimations = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.1,
+      duration: 0.5,
     },
   },
 };
 const buttonAnimation = {
-  hidden: { y: 40, opacity: 0 },
+  hidden: { scale: 0, opacity: 0 },
   visible: {
-    y: 0,
+    scale: 1,
     opacity: 1,
-    transition: { type: "spring", stiffness: 120, damping: 10 },
+    transition: { duration: 0.5, ease: "easeInOut" },
   },
 };
 function TeamNote() {
   const text = "Team Ahead";
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.5 });
+  const isInView = useInView(ref, { amount: 0.5, once: true });
 
   return (
-    <section className={"h-[70vh] w-full my-10 rounded-3xl p-10 "}>
-      <div className="w-4/5 mx-auto flex flex-col items-center">
+    <section className="w-full h-screen rounded-2xl p-10 flex items-center justify-center">
+      <div className="w-[70%] h-1/2 text-center">
         <h2 className="text-xl font-semibold mb-2">
           We take privacy seriously
         </h2>
@@ -42,7 +43,7 @@ function TeamNote() {
         </q>
         <span className="sr-only">{text}</span>
         <h2 className="text-2xl">
-          <span className="mr-1">with love,</span>{" "}
+          <span className="mr-1">with love,</span>
           <motion.span
             ref={ref}
             initial="hidden"
@@ -51,22 +52,25 @@ function TeamNote() {
             aria-hidden
             className={`${cursive.className}`}
           >
-            {text.split("").map((char) => (
-              <motion.span variants={textAnimations} key={char} className="font-normal text-3xl">
+            {text.split("").map((char, index) => (
+              <motion.span
+                variants={textAnimations}
+                key={index}
+                className="font-normal text-3xl"
+              >
                 {char}
               </motion.span>
             ))}
           </motion.span>
         </h2>
-        <motion.button
+        <motion.div
           variants={buttonAnimation}
-          initial="hidden"
-          animate="visible"
-          className="bg-black w-40 h-14 rounded-full text-white text-center"
+          animate={isInView ? "visible" : "hidden"}
+          className="flex flex-col items-center"
         >
-          Start a test
-        </motion.button>
-        <p>Take only 5 minutes</p>
+          <Button classNames={"mt-8"} title="Start a test" />
+          <p className="text-gray-700 mt-4">Take only 5 minutes</p>
+        </motion.div>
       </div>
     </section>
   );
