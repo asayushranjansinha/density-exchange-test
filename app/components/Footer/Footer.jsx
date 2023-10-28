@@ -1,6 +1,6 @@
 import { IoMdMail } from "react-icons/io";
 import { MdLocationPin } from "react-icons/md";
-import Logo from "../../../public/logo.png";
+import Logo from "../../../public/ahead.svg";
 import downloadIcon from "@/public/download.png";
 
 import Image from "next/image";
