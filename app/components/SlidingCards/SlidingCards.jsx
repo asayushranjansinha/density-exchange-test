@@ -9,7 +9,7 @@ function SlidingCards() {
   return (
     <div
       ref={ref}
-      className="max-h-[600px] w-full bg-white mt-10 rounded-3xl p-10"
+      className="h-[70vh] max-h-[600px] w-full bg-white mt-10 rounded-3xl p-10 select-none"
     >
       <SliderHeading _ref={ref} />
       <Slider />

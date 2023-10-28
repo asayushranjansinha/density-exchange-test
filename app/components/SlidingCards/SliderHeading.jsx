@@ -42,7 +42,7 @@ function SliderHeading({ _ref }) {
         variants={ghostVariants}
         initial="initial"
         animate={inView ? "animate" : "initial"}
-        className="h-20 w-20"
+        className="h-8 w-8"
       >
         <Image src={ghost} alt="ghost" className="object-cover h-full w-full" />
       </motion.div>

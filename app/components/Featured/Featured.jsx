@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+
 function Featured() {
   return (
     <section className="h-[30vh] max-h-[300px] w-full bg-white mt-10 rounded-3xl grid grid-cols-3 p-10 items-center">

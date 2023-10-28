@@ -1,10 +1,10 @@
 "use client";
-import animationData from "@/public/flower.json";
-import LottieAnimation from "../shared/LottieAnimation";
+import { useRef } from "react";
 
+import flower from "@/public/flower.png";
+import Image from "next/image";
 import Left from "./Left";
 import Right from "./Right";
-import { useRef } from "react";
 
 function SecondaryHero() {
   const ref = useRef(null);
@@ -15,11 +15,11 @@ function SecondaryHero() {
     >
       <Left _ref={ref} />
       <Right _ref={ref} />
-      <div className="h-28 w-28 absolute top-0 right-1/4 -translate-y-1/2">
-        <LottieAnimation
-          animationData={animationData}
-          loop={true}
-          classnames={"h-full w-full"}
+      <div className="h-16 w-16 absolute top-0 right-1/3 -translate-y-1/2">
+        <Image
+          src={flower}
+          alt="flower"
+          className="h-full w-full object-contain"
         />
       </div>
     </section>
