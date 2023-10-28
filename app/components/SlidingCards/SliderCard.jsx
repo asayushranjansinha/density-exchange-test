@@ -4,16 +4,17 @@ import classNames from "classnames";
 
 function SliderCard({ data }) {
   const cardClasses = classNames(
-    data.class,
-    "h-48",
-    "w-72",
-    "p-6",
-    "flex",
-    "flex-col",
-    "rounded-2xl",
-    { "-rotate-12": data.id === 3 }
-  );
+  "h-48",
+  "w-72",
+  "p-6",
+  "flex",
+  "flex-col",
+  "rounded-2xl",
+  { "-rotate-12": data.id === 3 },
+  ...data.class
+);
 
+console.log(data);
   return (
     <div className={cardClasses}>
       <Image src={data.image} alt={data.title} className="h-[28px] w-[28px] mb-2" />
