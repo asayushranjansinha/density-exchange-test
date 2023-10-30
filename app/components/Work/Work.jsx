@@ -2,7 +2,6 @@
 import { useRef } from "react";
 import Right from "./Right";
 import Left from "./Left";
-// bg-[#F3F0FE]
 function Work() {
   const ref = useRef(null);
   return (

@@ -1,8 +1,4 @@
-import angry from "@/public/angry.png";
-import shocked from "@/public/shocked.png";
-import question from "@/public/question.png";
-import sad from "@/public/sad.png";
-import blessed from "@/public/blessed.png";
+import { angryEmoji, blessedEmoji, sadEmoji, shockedEmoji, thinkEmoji } from "./app/assets";
 
 export const workFeatures = [
   {
@@ -62,31 +58,31 @@ export const situations = [
     id: 1,
     title: "Dealing with Family Conflict",
     body: "You find yourself in an argument with a family member. Instead of taking a step back and trying to understand their perspective, you get defensive and escalate the conflict.",
-    image: angry,
+    image: angryEmoji,
   },
   {
     id: 2,
     title: "Achieving a Career Milestone",
     body: "You receive a promotion at work, but instead of celebrating your accomplishments, you doubt your capabilities and worry about not being deserving of the position.",
-    image: shocked,
+    image: shockedEmoji,
   },
   {
     id: 3,
     title: "Struggling with Loneliness",
     body: "You feel a deep sense of loneliness and isolation. It's important to reach out to loved ones and seek support rather than internalizing your feelings.",
-    image: sad,
+    image: sadEmoji,
   },
   {
     id: 4,
     title: "Navigating Career Decisions",
     body: "You are faced with important career choices. Rather than feeling overwhelmed, take the time to assess your options and seek guidance from trusted mentors.",
-    image: question,
+    image: thinkEmoji,
   },
   {
     id: 5,
     title: "Finding Peace and Gratitude",
     body: "Amid life's challenges, take a moment to appreciate the blessings around you and cultivate a sense of gratitude for the positive aspects of your life.",
-    image: blessed,
+    image: blessedEmoji,
   },
 ];
 

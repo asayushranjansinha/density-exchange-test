@@ -1,13 +1,14 @@
 import Image from "next/image";
-import React from "react";
+
 import Button from "../shared/Button/Button";
-import Logo from "../../../public/ahead.svg";
+import { aheadLogo } from "@/app/assets";
+
 function Navbar() {
   return (
     <nav className="w-full sticky top-0 left-0 z-50 bg-white">
       <div className="container h-full mx-auto flex justify-between items-center px-10 py-1">
         <Image
-          src={Logo}
+          src={aheadLogo}
           alt="ahead logo"
           className="h-12 w-12 aspect-square rounded-md ml-8"
         />

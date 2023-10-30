@@ -1,6 +1,7 @@
-import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import ghost from "@/public/redGhost.png";
+import { motion, useInView } from "framer-motion";
+
+import { redGhost } from "@/app/assets";
 
 function SliderHeading({ _ref }) {
   const inView = useInView(_ref, { amount: 0.5, once: true });
@@ -44,7 +45,11 @@ function SliderHeading({ _ref }) {
         animate={inView ? "animate" : "initial"}
         className="h-8 w-8"
       >
-        <Image src={ghost} alt="ghost" className="object-cover h-full w-full" />
+        <Image
+          src={redGhost}
+          alt="redGhost"
+          className="object-cover h-full w-full"
+        />
       </motion.div>
     </div>
   );

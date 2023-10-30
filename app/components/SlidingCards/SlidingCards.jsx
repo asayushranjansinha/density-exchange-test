@@ -1,5 +1,4 @@
 "use client";
-
 import { useRef } from "react";
 import Slider from "./Slider";
 import SliderHeading from "./SliderHeading";

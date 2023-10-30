@@ -1,7 +1,8 @@
 "use client";
 import { motion, useInView } from "framer-motion";
-import ghost from "@/public/blue-ghost.png";
 import Image from "next/image";
+
+import { blueGhost } from "@/app/assets";
 
 function Heading({ _ref }) {
   const inView = useInView(_ref, { amount: 0.5, once: true });
@@ -29,7 +30,7 @@ function Heading({ _ref }) {
           initial="initial"
           animate={inView ? "animate" : "initial"}
         >
-          <Image src={ghost} alt="ghost" className="h-12 w-12" />
+          <Image src={blueGhost} alt="blueGhost" className="h-12 w-12" />
         </motion.div>
       </div>
     </div>

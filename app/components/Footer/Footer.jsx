@@ -1,17 +1,21 @@
+import Image from "next/image";
 import { IoMdMail } from "react-icons/io";
 import { MdLocationPin } from "react-icons/md";
-import Logo from "../../../public/ahead.svg";
-import downloadIcon from "@/public/download.png";
-
-import Image from "next/image";
+import { aheadLogo, downloadImage } from "@/app/assets";
 
 function Footer() {
   return (
     <footer className="w-full h-[50vh] max-h-[600px] p-10 mt-10 flex flex-col items-center">
       <hr className="border-t border-gray-400 mb-8 w-full" />
       <div className="w-3/5 h-4/5 flex flex-col items-center">
-        <Image src={Logo} className="col-span-1 h-10 w-10" alt="logo" />
-        <h5 className="text-xl font-semibold text-[#6946F0] mt-2 text-center">ahead</h5>
+        <Image
+          src={aheadLogo}
+          className="h-12 w-12 aspect-square rounded-md"
+          alt="logo"
+        />
+        <h5 className="text-xl font-semibold text-[#6946F0] mt-2 text-center">
+          ahead
+        </h5>
 
         <div className="flex gap-4 my-8">
           <div className="flex gap-2 items-center">
@@ -30,9 +34,9 @@ function Footer() {
           </div>
         </div>
 
-        <Image src={downloadIcon} className="h-12 w-36" loading="lazy" />
+        <Image src={downloadImage} className="h-12 w-36" loading="lazy" />
         <div className="text-center text-gray-500 text-sm py-4">
-          &copy; {new Date().getFullYear()} ahead
+          &copy; {new Date().getFullYear()} Ayush Ranjan Sinha
         </div>
       </div>
     </footer>

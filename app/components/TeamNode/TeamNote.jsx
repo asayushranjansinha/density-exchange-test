@@ -1,7 +1,7 @@
 "use client";
-import { inView, motion, useInView } from "framer-motion";
-import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { Great_Vibes } from "next/font/google";
+import { useRef } from "react";
 import Button from "../shared/Button/Button";
 
 const cursive = Great_Vibes({ weight: "400", subsets: ["latin"] });
@@ -13,7 +13,7 @@ const textAnimations = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.5,
+      duration: 1.5,
     },
   },
 };

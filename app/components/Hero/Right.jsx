@@ -1,10 +1,8 @@
-"use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import blueGhost from "@/public/heroblueghost.png";
-import neutral from "@/public/heroneutralghost.png";
-import red from "@/public/heroredghost.png";
-import Mobile from "@/public/heromobile.png";
+
+import { MobileImage, blueGhostHero, grayGhost, redGhost } from "@/app/assets";
+
 function Right() {
   return (
     <motion.div
@@ -25,8 +23,8 @@ function Right() {
           className="h-10 w-10 rounded-full absolute right-0 transform translate-x-1/2 top-1/2 -translate-y-1/2"
         >
           <Image
-            src={neutral}
-            alt="ghost"
+            src={grayGhost}
+            alt="grayGhost"
             className="h-full w-full object-contain z-50"
           />
         </motion.div>
@@ -37,8 +35,8 @@ function Right() {
           className="h-10 w-10 rounded-full absolute top-0 transform -translate-y-1/2"
         >
           <Image
-            src={red}
-            alt="ghost"
+            src={redGhost}
+            alt="redGhost"
             className="h-full w-full object-contain z-50"
           />
         </motion.div>
@@ -49,13 +47,13 @@ function Right() {
           className="h-10 w-10 rounded-full absolute left-0 transform -translate-x-1/2 top-1/2 -translate-y-1/2"
         >
           <Image
-            src={blueGhost}
-            alt="ghost"
+            src={blueGhostHero}
+            alt="grayGhost"
             className="h-full w-full object-contain z-50"
           />
         </motion.div>
         <div className="h-72 w-72 bg-[#E0D9FB] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full flex items-center justify-center">
-          <Image src={Mobile} alt="Mobile" className="h-72 w-48" />
+          <Image src={MobileImage} alt="MobileImage" className="h-72 w-48" />
         </div>
       </motion.div>
     </motion.div>

@@ -1,10 +1,10 @@
 "use client";
 import { useRef } from "react";
 
-import flower from "@/public/flower.png";
 import Image from "next/image";
 import Left from "./Left";
 import Right from "./Right";
+import { flowerImage } from "@/app/assets";
 
 function SecondaryHero() {
   const ref = useRef(null);
@@ -17,8 +17,8 @@ function SecondaryHero() {
       <Right _ref={ref} />
       <div className="h-16 w-16 absolute top-0 right-1/3 -translate-y-1/2">
         <Image
-          src={flower}
-          alt="flower"
+          src={flowerImage}
+          alt="flowerImage"
           className="h-full w-full object-contain"
         />
       </div>

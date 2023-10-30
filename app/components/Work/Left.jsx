@@ -1,6 +1,6 @@
+import { blueGhost } from "@/app/assets";
 import { motion, useInView } from "framer-motion";
-import animtionData from "@/public/owl.json";
-import LottieAnimation from "../shared/LottieAnimation";
+import Image from "next/image";
 
 function Left({ _ref }) {
   const inView = useInView(_ref, { amount: 0.5, once: true });
@@ -28,10 +28,7 @@ function Left({ _ref }) {
         Work with us
       </motion.h1>
       <div className="bg-white h-fit w-3/5 rounded-2xl drop-shadow-2xl">
-        <LottieAnimation
-          animationData={animtionData}
-          classnames={"h-8 w-8 m-4 "}
-        />
+        <Image src={blueGhost} alt="blueGhost" className={"h-8 w-8 m-4"} />
         <div className="px-4 py-2 ">
           <h3 className="text-xl font-medium mb-2">About</h3>
           <p className="text-gray-700 text-xl leading-8">

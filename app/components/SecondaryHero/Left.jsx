@@ -1,7 +1,7 @@
-import ghost from "@/public/ghostdull.svg";
-
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
+
+import { grayGhost } from "@/app/assets";
 
 function Left({ _ref }) {
   const inView = useInView(_ref, { amount: 0.5, once: true });
@@ -21,7 +21,7 @@ function Left({ _ref }) {
         <h1 className="text-4xl font-bold">Meet the ahead app</h1>
       </motion.div>
       <div className="w-48 h-48 bg-white rounded-full translate-x-1/2 mt-8 flex items-center justify-center">
-        <Image src={ghost} alt="ghost" className="h-24 w-20" />
+        <Image src={grayGhost} alt="grayGhost" className="h-24 w-20" />
       </div>
       <div className="flex items-center justify-center w-8 h-8 rounded-full bg-pink-300 absolute bottom-28 right-0 transform -translate-x-1/2 -translate-y-1/2" />
     </div>

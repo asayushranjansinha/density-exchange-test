@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { AiFillStar } from "react-icons/ai";
 
-import downloadIcon from "@/public/download.png";
+import { downloadImage } from "@/app/assets";
+
 function Left() {
   return (
     <div className="col-span-1 h-full flex items-center">
@@ -11,7 +12,7 @@ function Left() {
           Master your life <br /> by mastering <br /> emotions
         </h1>
         <div className="absolute bottom-0 left-0 flex items-center gap-6">
-          <Image src={downloadIcon} className="h-12 w-36" loading="lazy" />
+          <Image src={downloadImage} className="h-12 w-36" loading="lazy" />
           <div className="flex flex-col">
             <div className="flex gap-1 items-center text-[#FFCD2E]">
               {Array.from({ length: 5 }, (_, index) => (
