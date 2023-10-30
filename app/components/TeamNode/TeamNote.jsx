@@ -3,17 +3,23 @@ import { motion, useInView } from "framer-motion";
 import { Great_Vibes } from "next/font/google";
 import { useRef } from "react";
 import Button from "../shared/Button/Button";
+import { Banner } from "..";
 
 const cursive = Great_Vibes({ weight: "400", subsets: ["latin"] });
 
 const textAnimations = {
   hidden: {
     opacity: 0,
+    scale: 0.8,
+    y: 20,
   },
   visible: {
     opacity: 1,
+    scale: 1,
+    y: 0,
     transition: {
-      duration: 1.5,
+      duration: 3,
+      ease: "easeInOut",
     },
   },
 };
@@ -22,16 +28,16 @@ const buttonAnimation = {
   visible: {
     scale: 1,
     opacity: 1,
-    transition: { duration: 0.5, ease: "easeInOut" },
+    transition: { duration: 1, ease: "easeInOut" },
   },
 };
 function TeamNote() {
   const text = "Team Ahead";
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.5, once: true });
+  const isInView = useInView(ref, { amount: 0.5 });
 
   return (
-    <section className="w-full h-screen rounded-2xl p-10 flex items-center justify-center">
+    <Banner styles="h-screen flex items-center justify-center">
       <div className="w-[70%] h-1/2 text-center">
         <h2 className="text-xl font-semibold mb-2">
           We take privacy seriously
@@ -72,7 +78,7 @@ function TeamNote() {
           <p className="text-gray-700 mt-4">Take only 5 minutes</p>
         </motion.div>
       </div>
-    </section>
+    </Banner>
   );
 }
 

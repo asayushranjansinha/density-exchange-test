@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 
-import { grayGhost } from "@/app/assets";
+import { badgeOne, blueGhostHero } from "@/app/assets";
 
 function Left({ _ref }) {
   const inView = useInView(_ref, { amount: 0.5, once: true });
@@ -11,7 +11,7 @@ function Left({ _ref }) {
   };
 
   return (
-    <div className="col-span-1 h-full flex flex-col gap-4 mt-10 relative">
+    <div className="col-span-1 h-full flex flex-col gap-4 relative p-10 overflow-hidden rounded-2xl">
       <motion.div
         variants={variants}
         animate={inView ? "visible" : "hidden"}
@@ -20,10 +20,15 @@ function Left({ _ref }) {
         <h3 className="text-md font-semibold">Built out of frustration</h3>
         <h1 className="text-4xl font-bold">Meet the ahead app</h1>
       </motion.div>
-      <div className="w-48 h-48 bg-white rounded-full translate-x-1/2 mt-8 flex items-center justify-center">
-        <Image src={grayGhost} alt="grayGhost" className="h-24 w-20" />
+      <div className="w-48 h-48 bg-white rounded-full translate-x-1/2 mt-8 flex items-center justify-center relative z-40">
+        <Image src={blueGhostHero} alt="blueGhost" className="h-24 w-20" />
+        <Image
+          src={badgeOne}
+          alt="badgeOne"
+          className="h-8 w-8 absolute top-0 -translate-y-1/2"
+        />
       </div>
-      <div className="flex items-center justify-center w-8 h-8 rounded-full bg-pink-300 absolute bottom-28 right-0 transform -translate-x-1/2 -translate-y-1/2" />
+      <div className="h-60 w-60 bg-[#FBE8DD] rounded-full absolute left-0 top-1/2 -translate-x-8  translate-y-8 z-30"></div>
     </div>
   );
 }

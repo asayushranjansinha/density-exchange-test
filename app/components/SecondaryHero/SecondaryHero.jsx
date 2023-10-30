@@ -11,7 +11,7 @@ function SecondaryHero() {
   const ref = useRef(null);
   return (
     <Banner
-      styles="h-[70vh] bg-[#FFF6F1] grid grid-cols-2 relative"
+      styles="h-[70vh] bg-[#FFF6F1] grid grid-cols-2 relative p-0"
       forwardedRef={ref}
     >
       <Left _ref={ref} />
