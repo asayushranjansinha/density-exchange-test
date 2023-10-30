@@ -9,9 +9,8 @@ import {
   SlidingCards,
   TeamNote,
   Vacancies,
-  Work
+  Work,
 } from "@/app/components/index";
-
 export default function Home() {
   return (
     <main className="w-full h-full bg-white">

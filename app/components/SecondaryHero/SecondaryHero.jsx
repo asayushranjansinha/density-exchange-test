@@ -5,13 +5,14 @@ import Image from "next/image";
 import Left from "./Left";
 import Right from "./Right";
 import { flowerImage } from "@/app/assets";
+import { Banner } from "..";
 
 function SecondaryHero() {
   const ref = useRef(null);
   return (
-    <section
-      ref={ref}
-      className="w-full h-[70vh] max-h-[600px] rounded-2xl bg-[#FFF6F1] grid grid-cols-2 p-10 mt-10 relative"
+    <Banner
+      styles="h-[70vh] bg-[#FFF6F1] grid grid-cols-2 relative"
+      forwardedRef={ref}
     >
       <Left _ref={ref} />
       <Right _ref={ref} />
@@ -22,7 +23,7 @@ function SecondaryHero() {
           className="h-full w-full object-contain"
         />
       </div>
-    </section>
+    </Banner>
   );
 }
 

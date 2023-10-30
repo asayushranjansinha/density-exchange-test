@@ -9,3 +9,4 @@ export { default as Work } from "@/app/components/Work/Work";
 export { default as Vacancies } from "@/app/components/Vacancies/Vacancies";
 export { default as Footer } from "@/app/components/Footer/Footer";
 export { default as Motion } from "@/app/components/shared/Motion/Motion";
+export { default as Banner } from "@/app/components/Banner/Banner";
