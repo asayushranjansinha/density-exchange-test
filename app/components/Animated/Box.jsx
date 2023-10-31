@@ -2,17 +2,8 @@ import { motion, useInView } from "framer-motion";
 import React from "react";
 
 function Box({ _ref }) {
-  const inView = useInView(_ref, { amount: 0.5, once: true });
-  const itemVariants = {
-    hidden: { x: "100%", y: "-50%", scale: 0, opacity: 0 },
-    visible: {
-      x: "0%",
-      y: "0%",
-      scale: 1,
-      opacity: 1,
-      transition: { duration: 1 },
-    },
-  };
+  const inView = useInView(_ref, { amount: 0.5 });
+
   return (
     <div className="w-full lg:w-1/2 h-44 bg-white mt-20 px-8 lg:px-20 rounded-2xl shadow-lg flex items-center justify-center">
       <div className="relative w-full h-0 border border-gray-400 flex items-center justify-between">
