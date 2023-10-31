@@ -2,17 +2,18 @@
 import { useRef } from "react";
 import Slider from "./Slider";
 import SliderHeading from "./SliderHeading";
+import { Banner } from "..";
 
 function SlidingCards() {
   const ref = useRef(null);
   return (
-    <div
-      ref={ref}
-      className="h-[70vh] max-h-[600px] w-full bg-white mt-10 rounded-3xl p-10 select-none"
+    <Banner
+      forwardedRef={ref}
+      styles="select-none mt-20 o"
     >
       <SliderHeading _ref={ref} />
       <Slider />
-    </div>
+    </Banner>
   );
 }
 

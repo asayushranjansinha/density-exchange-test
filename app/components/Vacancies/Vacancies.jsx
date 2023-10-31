@@ -4,6 +4,7 @@ import { vacancies } from "@/constants";
 import React, { useRef } from "react";
 import Card from "./Card";
 import { useInView, motion } from "framer-motion";
+import { Banner } from "..";
 
 function Vacancies() {
   const ref = useRef(null);
@@ -21,21 +22,24 @@ function Vacancies() {
     },
   };
   return (
-    <section ref={ref} className="w-full h-[60vh] my-10 p-10">
+    <Banner
+      forwardedRef={ref}
+      styles="lg:h-[60vh] p-10 overflow-hidden"
+    >
       <motion.h1
         variants={Leftvariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="text-6xl font-medium"
+        className="text-3xl lg:text-6xl font-medium mb-8"
       >
         Open Vacancies
       </motion.h1>
-      <div className="w-full h-fit flex gap-20 mt-10">
+      <div className="w-full h-fit grid grid-cols-1 lg:grid-cols-3 gap-10 mx-auto">
         {vacancies.map((item) => (
           <Card key={item.id} data={item} />
         ))}
       </div>
-    </section>
+    </Banner>
   );
 }
 

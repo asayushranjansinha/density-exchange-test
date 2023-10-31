@@ -20,7 +20,7 @@ function Left({ _ref }) {
         <h3 className="text-md font-semibold">Built out of frustration</h3>
         <h1 className="text-4xl font-bold">Meet the ahead app</h1>
       </motion.div>
-      <div className="w-48 h-48 bg-white rounded-full translate-x-1/2 mt-8 flex items-center justify-center relative z-40">
+      <div className="w-48 h-48 bg-white rounded-full transform -translate-x-4 lg:translate-x-1/2 mt-8 flex items-center justify-center relative z-40">
         <Image src={blueGhostHero} alt="blueGhost" className="h-24 w-20" />
         <Image
           src={badgeOne}

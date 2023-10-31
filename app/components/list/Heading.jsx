@@ -18,12 +18,12 @@ function Heading({ _ref }) {
     },
   };
   return (
-    <div className="">
+    <div className="px-10 py-4">
       <h3 className="text-md font-medium mt-8">
         Wrong with self-improvement & how we're fixing it.
       </h3>
       <div className="flex h-full">
-        <h2 className="text-[40px] font-bold mt-2">Self-improvement. Ugh.</h2>
+        <h2 className="text-xl lg:text-[40px] font-bold mt-2">Self-improvement. Ugh.</h2>
 
         <motion.div
           variants={ghostVariants}

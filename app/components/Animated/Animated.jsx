@@ -10,17 +10,20 @@ function Animated() {
   return (
     <Banner
       forwardedRef={ref}
-      styles="h-[90vh] bg-[#EDF8FE] flex flex-col items-center"
+      styles="bg-[#EDF8FE] flex flex-col items-center py-10"
+      id="self-awareness"
     >
-      <h3 className="text-md font-medium text-center mt-10">
+      <h3 className="textsm lg:text-md font-medium text-center mt-10">
         Let your friends, family, and co-workers (anonymously) rate your social
         skills.
       </h3>
-      <h2 className="text-[40px] font-bold text-center mt-8">
+      <h2 className="text-md lg:text-[40px] font-bold text-center mt-8">
         Ever wondered what others think of you?
       </h2>
       <Line />
-      <Box _ref={ref} />
+      <div className="w-full px-10 flex items-center justify-center">
+        <Box _ref={ref} />
+      </div>
     </Banner>
   );
 }

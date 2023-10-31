@@ -17,7 +17,7 @@ function Footer() {
           ahead
         </h5>
 
-        <div className="flex gap-4 my-8">
+        <div className="flex flex-col lg:flex-row gap-4 my-8">
           <div className="flex gap-2 items-center">
             <i className="w-8 h-8 p-2 bg-[#9EEFD6] rounded-full flex items-center justify-center">
               <IoMdMail size={20} />

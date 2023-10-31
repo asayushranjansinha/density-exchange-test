@@ -14,7 +14,7 @@ import {
 export default function Home() {
   return (
     <main className="w-full h-full bg-white">
-      <div className="container mx-auto h-full px-8">
+      <div className="container mx-auto h-full px-8 z-0">
         <Hero />
         <Motion>
           <Featured

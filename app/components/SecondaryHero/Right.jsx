@@ -12,13 +12,13 @@ function Right({ _ref }) {
       variants={variants}
       animate={inView ? "visible" : "hidden"}
       transition={{ duration: 0.5 }}
-      className="col-span-1 h-full flex flex-col items-center justify-center gap-4 text-gray-700 font-medium opacity-80"
+      className="col-span-1 h-full flex flex-col items-center justify-center gap-4 p-10 text-gray-700 font-medium opacity-80"
     >
-      <h2 className="w-2/3 mx-auto">
+      <h2 className="w-full lg:w-2/3 mx-auto">
         A personalized pocket coach that provides bite- sized, science-driven
         tools to boost emotional intelligence.
       </h2>
-      <h2 className="w-2/3 mx-auto">
+      <h2 className="w-full lg:w-2/3 mx-auto">
         Think of it as a pocket cheerleader towards a better, more fulfilling.
       </h2>
     </motion.div>

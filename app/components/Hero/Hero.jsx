@@ -5,7 +5,10 @@ import Right from "./Right";
 
 function Hero() {
   return (
-    <Banner styles="h-[80vh] bg-[#EEEAFF] mt-2 grid grid-cols-2 p-10">
+    <Banner
+      id="home"
+      styles="bg-[#EEEAFF] mt-4 grid gap-10 grid-col-1 lg:grid-cols-2 overflow-hidden p-10"
+    >
       <Left />
       <Right />
     </Banner>

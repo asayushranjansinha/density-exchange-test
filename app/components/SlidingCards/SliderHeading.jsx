@@ -29,13 +29,13 @@ function SliderHeading({ _ref }) {
     },
   };
   return (
-    <div className="flex  items-center">
-      <motion.h2
+    <div className="flex items-center px-10 pt-10 overflow-hidden">
+     <motion.h2
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={variants}
-        className="text-5xl font-medium"
-        style={{ display: "inline-block", transformOrigin: "left" }}
+        className="text-2xl lg:text-5xl font-medium"
+        style={{ transformOrigin: "left" }}
       >
         Does this sound familiar...
       </motion.h2>
@@ -43,7 +43,7 @@ function SliderHeading({ _ref }) {
         variants={ghostVariants}
         initial="initial"
         animate={inView ? "animate" : "initial"}
-        className="h-8 w-8"
+        className="h-8 w-8 z-50"
       >
         <Image
           src={redGhost}

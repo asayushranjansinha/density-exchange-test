@@ -38,17 +38,17 @@ function TeamNote() {
 
   return (
     <Banner styles="h-screen flex items-center justify-center">
-      <div className="w-[70%] h-1/2 text-center">
-        <h2 className="text-xl font-semibold mb-2">
+      <div className="w-full lg:w-[70%] h-1/2 text-center">
+        <h2 className="text-md lg:text-xl font-semibold mb-2">
           We take privacy seriously
         </h2>
-        <h1 className="text-4xl font-bold mb-4">Before you get started</h1>
-        <q className="text-2xl text-center mb-6 text-gray-800">
+        <h1 className="text-2xl lg:text-4xl font-bold mb-4">Before you get started</h1>
+        <q className="text-lg lg:text-2xl text-center mb-6 text-gray-800">
           We won't share your answers with anyone(and won't ever tell you which
           friends said what about you)
         </q>
         <span className="sr-only">{text}</span>
-        <h2 className="text-2xl">
+        <h2 className="text-2xl lg:text-3xl">
           <span className="mr-1">with love,</span>
           <motion.span
             ref={ref}
